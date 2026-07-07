@@ -1,1 +1,49 @@
 @import "tailwindcss";
+
+@theme {
+  --color-brand-purple: #6733cd;
+  --color-brand-purple-hover: #5528b3;
+  --color-brand-coral: #fe8f75;
+  --color-brand-coral-hover: #e57d63;
+  --color-brand-green: #7ed500;
+  --color-brand-teal: #00e49a;
+
+  --color-brand-dark: #121214;
+  --color-brand-dark-card: #1c1c1f;
+  --color-brand-dark-gray: #333333;
+  --color-brand-light-gray: #f9f9f9;
+  --color-brand-medium-gray: #cccccc;
+
+  --font-inter: var(--font-inter);
+  --font-size-2xs: 0.625rem;
+  --spacing-mobile-height: calc(100vh - 5rem);
+
+  --animate-fade-in: fade-in 0.5s ease-out forwards;
+  --animate-slide-up: slide-up 0.6s ease-out forwards;
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes slide-up {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: #ffffff;
+  color: #121214;
+}
